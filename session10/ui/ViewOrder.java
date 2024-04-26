@@ -1,43 +1,44 @@
+// ViewOrder.java
 package session10.ui;
 
-import session10.controller.ControllerProduct;
+import session10.controller.ControllerOrder;
 
 import java.sql.SQLException;
 import java.util.Scanner;
 
-public class ViewProduct {
+public class ViewOrder {
     public static void showMenu() {
         Scanner sc = new Scanner(System.in);
         int choice;
 
         do {
-            System.out.println("===========Product Management============");
-            System.out.println("1. Add product");
-            System.out.println("2. Search product by Id");
-            System.out.println("3. Show all products");
-            System.out.println("4. Update product");
-            System.out.println("5. Delete product");
+            System.out.println("===========Order Management============");
+            System.out.println("1. Add order");
+            System.out.println("2. Search order by Id");
+            System.out.println("3. Show all orders");
+            System.out.println("4. Update order");
+            System.out.println("5. Delete order");
             System.out.println("0. Exit");
             System.out.println("Enter your choice");
             choice = sc.nextInt();
             switch (choice) {
                 case 1:
-                    ControllerProduct.createProduct();
+                    ControllerOrder.creatOrder();
                     break;
                 case 2:
-                    ControllerProduct.getProductById();
+                    ControllerOrder.getOrderById();
                     break;
                 case 3:
-                    ControllerProduct.getAllProduct();
+                    ControllerOrder.getAllOrder();
                     break;
                 case 4:
-                    ControllerProduct.updateProduct();
+                    ControllerOrder.updateOrder();
                     break;
                 case 5:
-                    ControllerProduct.deleteProduct();
+                    ControllerOrder.deleteOrder();
                     break;
                 case 0:
-                    System.out.println("Exit Product Management");
+                    System.out.println("Exit Order Management");
                     break;
                 default:
                     System.out.println("Invalid choice");
